@@ -1,0 +1,26 @@
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+
+    compile 'org.apache.cxf:cxf-rt-frontend-jaxws:3.0.3'
+    compile 'org.apache.cxf:cxf-rt-transports-http:3.0.3'
+    compile 'org.apache.cxf:cxf-rt-rs-extension-providers:3.0.3'
+    compile 'org.codehaus.jackson:jackson-jaxrs:1.1.1'
+
+    compile 'org.springframework:spring-context:3.2.13.RELEASE'
+    compile 'org.springframework:spring-core:3.2.13.RELEASE'
+    compile 'org.springframework:spring-beans:3.2.13.RELEASE'
+    compile 'org.springframework:spring-web:3.2.13.RELEASE'
+
+    compile 'org.slf4j:slf4j-api:1.7.7'
+
+    testCompile 'junit:junit:4.11'
+}
